@@ -62,4 +62,28 @@
     - 변수.index("문자열") : 몇번에 위치?,  "문자열", index + 1 그 뒤에
     - 변수.find("문자열") : 문자열 검색
     - 변수.count("문자열") : 몇번 등장 하는지
+    - 변수.append("문자열") : 마지막에 문자열 삽임
+      
+17. 리스트
+    - 변수 = [val, val, val]
+    - 변수.insert(1,"문자열") : 1번 위치에 삽입
+    - 변수.append("문자열") : 마지막에 문자열 삽임
+    - 변수.pop("문자열") : 맨 뒤부터 꺼냄
+    - 변수.sort() : 오름차순 정렬
+    - 변수.reverse() : 순서 뒤집기
+    - 변수.clear : 지우기
+    - 변수 = ["asd",10,True] : 다양한 자료형 함께 사용 가능함 
+    - 변수1 = extend(변수2) : 리스트 합침
    
+18. 딕셔너리
+    - 변수{key1 : value, key2 : value}
+    - print(변수[key1]) : 대괄호가 들어가야 됨 (없는 값 출력 시 종료)
+    - print(변수.get(key1)) : 위와 동일한 출력 (없는 값 출력 시 None 출력)
+    - print(변수.get(key1, "사용 가능")) : None이 아닌 사용 가능 출력
+    - print(key1 in 변수) : True, print(key3 in 변수) : False
+    - 변수["key3"] = "value" : 삽입 및 업데이트 가능
+    - del 변수["key"] : 삭제
+    - print(변수.keys()) : 키만 출력
+    - 변수.values() : value만 출력
+    - 변수.items() : 쌍으로 출력
+    - .clear : 지우기
