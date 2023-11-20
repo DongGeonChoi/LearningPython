@@ -89,7 +89,8 @@
     - print(key1 in 변수): True, print(key3 in 변수): False
     - 변수["key3"] = "value": 삽입 및 업데이트 가능
     - del 변수["key"]: 삭제
-    - print(변수.keys()): 키만 출력
+    - 변수.keys: 키만 list형태로 출력 (dict_keys(['apple', 'banana', 'cat']))
+    - keys로 출력 시 제약사항이 생기는데 .pop .insert .del 사용 불가
     - 변수.values(): value만 출력
     - 변수.items(): 쌍으로 출력
     - .clear: 지우기
