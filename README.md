@@ -109,3 +109,78 @@
     - 실수는 일반적으로 우리가 일상적으로 사용하는 숫자
     - 허수는 실수로는 표현할 수 없는 숫자 (실수는 어떤 수의 제곱근도 음수가 될 수 없음 그렇기에 허수 단위 i 도입)
     - 1,2 각각 제곱한 후 더하고 그 합의 제곱근을 구해야 함 루트(1*1 + 2*2 = 1+4 = 루트5) 루트5의 제곱근이 절대값
+
+21. 함수
+    - def sum(함수명)(매개변수1, 매개변수2):
+          변수 = 매개변수1 + 매개변수2 
+          return 변수 **OR** return 매개변수1 + 매개변수2 
+      prunt(sum(5,6))
+    - 입력에 대한 결과를 만들어주는 역할을 하고, 반복입력 대체, 가독성 증가
+    - 출력에 해당하는 값은 return 이후에 있는 내용을 출력해준다
+    - 입력값의 개수를 정확하게 알지 못할 경우 변수 앞에 *를 추가하여 사용
+    - 개수가 정해지지 않은 다수의 인자가 전달되면 모두 묶어서 한 개의 튜플 자료형으로 받음
+    - 여러개의 출력값을 함께 출력해줄 수 있으며, 이 경우 튜플 형태로 출력
+    - return 자체는 값을 반환 및 탈출 기능으로 사용 가능
+    - 함수 매개변수의 기본값을 a = True 같은 향태로 지정 가능(기본값이 없는 변수와 공존할 경우 가장 뒤에 와야 됨)
+    - def test(a,b,c = True):
+      
+22. 클래스
+    - 객체 지향 언어의 특징으로 물체를 정의하고 해당하는 동작을 정의
+    - 인스턴스트는 클래스를 통해 생성된 객체를 의미하고, 매소드는 클래스 내부에 정의된 **함수**를 의미한다.
+    - 메소드는 필수적으로 입력을 self로 받아야만 한다
+      class Test_Class:
+          #생성자 메서드
+          def __init__(self):
+              self.result = 0
+          def adder(self, num):
+              self.result += num
+              return self.result
+    - 생성자는 class를 통해 인스턴스가 생성될 때 자동으로 동작하고
+      class 내부에서 사용되는 변수를 초기화, 정의 하는 역할을 한다. 생성자가 없으면 class에 매개변수를 전달할 수 없음
+    - 클래스로부터 만들어진 개체는 인스턴스라고 함
+
+    class car:
+        def __init__(self, brand, model):
+            self.brand = brand
+            self.model = model
+
+        def display_info(self):
+            print(f"This car is a {self.brand} {self.model}")
+
+    #car 클래스로부터 인스턴스 생성 my_car, your_car라는 두 개의 인스턴스 생성
+    my_car = car("Kia", "K5") 
+    your_car = car("Hyndai", "Avante")
+    #인스턴스 변수 접근
+    print(my_car.brand)
+    print(my_car.model)
+    #메서드 호출
+    my_car.display_info()
+    your_car.display_info()
+
+23. 클래스 상속
+    - 부모의 기능을 그대로 받아올 수 있으며, 추가적으로 기능을 정의하여 사용할 수 있음
+    - Method overriding이란 상속 받은 객체에서 동일한 이름으로 다른 역할을 하는
+      메소드를 생성하는 것을 의미하며 이 경우 부모에 있는 메소드보다 자식에 있는 메소드가 우선적으로 동작
+    - Method overriding 예시
+    class Country:
+        name = '국가명'
+        population = '인구'
+        captial = '수도'
+
+        def show(self):
+            print("국가 클래스의 메소드 입니다.")
+
+        def show_name(self):
+            print("국가의 이름을 알려줍니다.")
+
+    class korea(Country):
+
+        def __init__(self, name):
+            self.name = name
+
+        def show_name(self):
+            print(f"국가의 이름은: {self.name}")
+
+    - 
+        
+    
