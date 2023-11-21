@@ -181,6 +181,36 @@
         def show_name(self):
             print(f"국가의 이름은: {self.name}")
 
-    - 
-        
-    
+    - 변수 name, 메소드 show_name 자식에 있는 메소드가 우선적으로 동작하는 것을 알 수 있음
+
+24. packing, unpacking
+    - packing은 여러개의 값을 하나의 객체로 합쳐서 받을 수 있도록 함
+      def func(*args):
+          print(args)
+          print(type(args))
+      
+      func(1,2,3,4,6,"a","b")
+      
+        ---------------
+      (1, 2, 3, 4, 5, 6, 'a', 'b')
+      <class 'tuple'>
+
+    - 활용해서 필수 매개변수와 여러개를 받을 수 있는 매개변수를 구분해서 작성할 수 있음
+      def name(father, mother, *friends)
+          print("아버지:", father)
+          print("어머니:", mother)
+          #참 거짓
+          if friends:
+              print("친구들")
+              for name in friends:
+                  print(name)
+      name("홍길동","심사임당","이병헌","윤아")
+
+    - unpacking 객체를 포함하고 있는 하나의 객체를 풀어준다.
+    - 아래는 리스트로 패킹이 되어 있기 때문에 매개변수 a에만 전달되어 에러가 발생하고 언패킹을 통해 출력이 가능함
+      numbers = [1,2,3]
+      sum(numbers) # error
+
+      print(sum(*sumbers)) # 출력
+      
+          
